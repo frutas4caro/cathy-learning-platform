@@ -1,0 +1,69 @@
+.clipboard {
+    position: relative;
+    background-image: url('../assets/clipboard.svg');
+    width: 100%;
+    height: 400px;
+    background-size: contain; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden; 
+    padding: 10px;
+    gap: 20px;
+}
+
+.clipboard-title {
+    padding: 10px;
+    position: absolute;
+    top:22%;
+    left:50%;
+    text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.5);
+    /* font-size: 2.15rem; */
+    font-size:2.5rem;
+    font-weight: 550;
+    color: #425957;
+    margin-bottom: 5px;
+    text-align: center;
+    transform: translate(-50%, -30%);
+    /* transform: translateX(-50%); */
+    /* white-space: ; */
+    width: 100%; 
+    /* overflow-wrap: break-word; */
+    display: inline-block;
+    word-spacing: 1px; /* Add space between words to balance wrapping */
+    letter-spacing: 0.5px; /* Add space between letters for better balance (optional) */
+
+}
+
+.clipboard-paragraph {
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+
+.clipboard-svg{
+    max-width: 90%; /* Slightly smaller for mobile */
+  }
+
+
+.clipboard-title {
+    font-size: 1.5rem;
+
+}
+
+.clipboard-paragraph {
+    font-size: .25rem;
+}
+
+
+  
+
+}
+
+
