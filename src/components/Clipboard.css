@@ -1,5 +1,4 @@
 .clipboard {
-  /* background-color: black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,13 +33,12 @@
 
 .clipboard-paragraph {
   position: absolute;
-  font-size: 2.5vh;
+  font-size: 2.25vh;
   font-weight: 400;
   color: white;
   text-align: center;
   top: 32%;
   padding: 13%;
-  word-spacing: 1.2px; /* Add space between words to balance wrapping */
 }
 
 @media (max-width: 768px) {
@@ -50,7 +48,7 @@
   }
 
   .clipboard-paragraph {
-    font-size: 4.2vh;
+    font-size: 3.5vh;
   }
   
 }
