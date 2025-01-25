@@ -1,69 +1,56 @@
 .clipboard {
-    position: relative;
-    background-image: url('../assets/clipboard.svg');
-    width: 100%;
-    height: 400px;
-    background-size: contain; /* Ensure the image covers the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow:hidden; 
-    padding: 10px;
-    gap: 20px;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.clipboard-image {
+  position: relative;
+  width: 100%; /* Makes sure the image takes up the container's width */
+  height: auto; /* Keeps the aspect ratio of the SVG */
+  object-fit: contain; /* Ensures the SVG fits without stretching */
 }
 
 .clipboard-title {
-    padding: 10px;
-    position: absolute;
-    top:22%;
-    left:50%;
-    text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.5);
-    /* font-size: 2.15rem; */
-    font-size:2.5rem;
-    font-weight: 550;
-    color: #425957;
-    margin-bottom: 5px;
-    text-align: center;
-    transform: translate(-50%, -30%);
-    /* transform: translateX(-50%); */
-    /* white-space: ; */
-    width: 100%; 
-    /* overflow-wrap: break-word; */
-    display: inline-block;
-    word-spacing: 1px; /* Add space between words to balance wrapping */
-    letter-spacing: 0.5px; /* Add space between letters for better balance (optional) */
-
+  position: absolute;
+  top: 10%;
+  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.5);
+  font-size: 3vw;
+  font-weight: 550;
+  color: #425957;
+  text-align: center;
+  text-wrap: wrap;
+  transform: translate(0, -22%);
+  max-width: 90%; /* Prevents title from exceeding container */
+  overflow-wrap: break-word;
+  word-wrap: break-word; /* For backward compatibility */
+  word-spacing: 1px; /* Add space between words to balance wrapping */
+  letter-spacing: 0.5px; /* Add space between letters for better balance (optional) */
 }
 
 .clipboard-paragraph {
-    font-size: 1rem;
-    font-weight: 400;
-    color: black;
-    margin: 0;
+  position: absolute;
+  font-size: 2.5vh;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  top: 32%;
+  padding: 13%;
+  word-spacing: 1.2px; /* Add space between words to balance wrapping */
 }
-
 
 @media (max-width: 768px) {
-
-.clipboard-svg{
-    max-width: 90%; /* Slightly smaller for mobile */
+  .clipboard-title {
+    font-size: 6vh;
+    top:12%;
   }
 
-
-.clipboard-title {
-    font-size: 1.5rem;
-
-}
-
-.clipboard-paragraph {
-    font-size: .25rem;
-}
-
-
+  .clipboard-paragraph {
+    font-size: 4.2vh;
+  }
   
-
 }
-
-
