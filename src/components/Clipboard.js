@@ -11,7 +11,10 @@ function Clipboard({ title, content }) {
         className="clipboard-image"
       />
       <h2 className="clipboard-title">{title}</h2>
-      <p className="clipboard-paragraph">{content}</p>
+      <p className="clipboard-paragraph">
+        {content.map((item, index) =>
+        item.bold ? <strong key={index}>{item.text}</strong> : item.text
+    )}</p>
     </div>
   );
 }
